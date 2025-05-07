@@ -46,7 +46,7 @@ SYSTEM_PROMPT = (
 )
 
 # --- Streamlit UI ---
-st.title("🧾 Invoice Extractor using GPT-4o Vision")
+st.title("Cody ERP OCR Invoice to JSON POC")
 
 uploaded_file = st.file_uploader("Upload an invoice image", type=["png", "jpg", "jpeg", "webp"])
 
