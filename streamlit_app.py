@@ -7,8 +7,8 @@ from pathlib import Path
 import os
 
 # Set your OpenAI API Key securely via Streamlit secrets or environment variable
-os.environ["OPENAI_API_KEY"] = "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"
-client = OpenAI()
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"] if "OPENAI_API_KEY" in st.secrets else os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 JSON_FORMAT_TEMPLATE = """
 {
